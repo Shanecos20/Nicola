@@ -1,0 +1,28 @@
+@font-face {
+  font-family: 'Maghony';
+  src: url('./fonts/Maghony.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Lizzy Handwriting';
+  src: url('./fonts/Lizzy Handwriting W90 Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Birthstone';
+  src: url('./fonts/Birthstone-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Whisper';
+  src: url('./fonts/Whisper-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+

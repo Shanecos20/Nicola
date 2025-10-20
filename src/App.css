@@ -1,0 +1,299 @@
+.container {
+  max-width: 550px;
+  width: 90%;
+  min-height: 80vh;
+  max-height: 95vh;
+  background: rgba(217, 216, 216, 0.35);
+  backdrop-filter: blur(40px);
+  -webkit-backdrop-filter: blur(40px);
+  border-radius: 70% 70% 24px 24px / 34% 34% 24px 24px;
+  box-shadow: 0 15px 60px rgba(0, 0, 0, 1);
+  padding: 6.5vh 5vw 4vh;
+  text-align: center;
+  position: relative;
+  overflow: visible;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 0 auto;
+}
+
+/* Side grayscale images framing the card */
+.side-image {
+  position: fixed;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 24vw;
+  max-width: 380px;
+  opacity: 0.85;
+  filter: grayscale(100%);
+  pointer-events: none;
+  box-shadow: 0 15px 60px rgba(0, 0, 0, 1);
+}
+
+.side-image.left { left: 2vw; }
+.side-image.right { right: 2vw; }
+
+.side-image img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Large blurred background halves */
+.side-bg {
+  position: fixed;
+  top: 0;
+  height: 100vh;
+  width: 50vw;
+  overflow: hidden;
+  z-index: -1;
+  opacity: 0.35;
+  filter: grayscale(100%) blur(10px);
+}
+
+.side-bg.left { left: 0; }
+.side-bg.right { right: 0; }
+
+.side-bg img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.leaf-decoration {
+  width: 320px;
+  height: auto;
+  margin: -18.5vh auto 1vh;
+  opacity: 0.9;
+  position: relative;
+  z-index: 10;
+}
+
+.leaf-decoration img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.save-the-date {
+  font-family: 'Maghony', serif;
+  font-size: clamp(3rem, 12vw, 5rem);
+  color: #68450f;
+  font-weight: normal;
+  letter-spacing: 0.10em;
+  margin-bottom: 0.6vh;
+  text-transform: uppercase;
+  line-height: 0.90;
+  margin-top: -12.5vh;
+  position: relative;
+  z-index: 20;
+}
+
+.save-the-date .the {
+  font-family: 'Whisper', cursive;
+  font-size: 0.9em;
+  font-style: normal;
+  text-transform: lowercase;
+  color: #68450f;
+  vertical-align: middle;
+  font-weight: 200;
+  letter-spacing: 0;
+  margin-left: -0.2em;
+  margin-right: -0.2em;
+}
+
+.divider {
+  width: 1px;
+  height: 4vh;
+  background: #8f611d82;
+  margin: 1.2vh auto;
+}
+
+.horizontal-line {
+  width: 80%;
+  height: 1px;
+  background: #8f611d52;
+  margin: 1.5vh auto;
+}
+
+.wedding-of {
+  font-family: 'Raleway', sans-serif;
+  font-size: clamp(0.75rem, 3vw, 0.95rem);
+  letter-spacing: 0.22em;
+  color: #68450f;
+  text-transform: uppercase;
+  margin-bottom: 1.2vh;
+  font-weight: 300;
+}
+
+.names {
+  font-family: 'Maghony', cursive;
+  font-size: clamp(1.8rem, 8vw, 2rem);
+  color: #7a5f3d;
+  margin-bottom: 1.2vh;
+  font-weight: normal;
+  letter-spacing: 0.04em;
+  white-space: normal;
+  line-height: 1.2;
+}
+
+
+
+.venue {
+  font-family: 'Raleway', sans-serif;
+  font-size: clamp(0.9rem, 3.5vw, 1.1rem);
+  color: #8b7965;
+  letter-spacing: 0.08em;
+  margin: 1.5vh auto;
+  line-height: 1.4;
+  font-weight: 300;
+  max-width: 90%;
+  word-wrap: break-word;
+}
+
+.date {
+  font-family: 'Raleway', sans-serif;
+  font-size: clamp(1.8rem, 6vw, 2.4rem);
+  color: #7a5f3d;
+  margin-top: 1.4vh;
+  letter-spacing: 0.15em;
+  font-weight: 300;
+}
+
+.watermark {
+  display: none;
+}
+
+/* Mobile Portrait (default mobile view) */
+@media (max-width: 768px) {
+  body {
+    padding: 10px;
+  }
+  
+  .container {
+    width: 95%;
+    max-width: 400px;
+    padding: 3rem 1.5rem 2rem;
+    min-height: 85vh;
+    border-radius: 50% 50% 20px 20px / 25% 25% 20px 20px;
+  }
+
+  .side-image {
+    display: none;
+  }
+  
+  .leaf-decoration {
+    width: 200px;
+    margin: -10vh auto 2vh;
+  }
+  
+  .save-the-date {
+    margin-top: -5vh;
+    margin-bottom: 1.5rem;
+  }
+  
+  .divider {
+    height: 3vh;
+    margin: 1.5rem auto;
+  }
+  
+  .wedding-of {
+    margin-bottom: 1rem;
+  }
+  
+  .names {
+    margin-bottom: 1.5rem;
+  }
+  
+  .venue {
+    margin: 1.5rem auto;
+    padding: 0 1rem;
+  }
+  
+  .date {
+    margin-top: 1.5rem;
+  }
+}
+
+/* Small Mobile */
+@media (max-width: 375px) {
+  .container {
+    padding: 2.5rem 1rem 1.5rem;
+  }
+  
+  .leaf-decoration {
+    width: 160px;
+    margin: -8vh auto 1.5vh;
+  }
+  
+  .save-the-date {
+    letter-spacing: 0.05em;
+  }
+  
+  .wedding-of {
+    letter-spacing: 0.15em;
+  }
+  
+  .names {
+    letter-spacing: 0.02em;
+  }
+}
+
+/* Landscape Mobile */
+@media (max-width: 896px) and (max-height: 500px) and (orientation: landscape) {
+  body {
+    padding: 5px;
+  }
+  
+  .container {
+    min-height: 90vh;
+    max-height: 95vh;
+    padding: 2rem 3rem 1.5rem;
+  }
+  
+  .leaf-decoration {
+    width: 150px;
+    margin: -6vh auto 1vh;
+  }
+  
+  .save-the-date {
+    margin-top: -4vh;
+    margin-bottom: 0.5rem;
+  }
+  
+  .divider {
+    height: 2vh;
+    margin: 0.5rem auto;
+  }
+  
+  .wedding-of {
+    margin-bottom: 0.5rem;
+  }
+  
+  .names {
+    margin-bottom: 0.5rem;
+  }
+  
+  .venue {
+    margin: 0.5rem auto;
+  }
+  
+  .date {
+    margin-top: 0.5rem;
+  }
+}
+
+/* Touch hover states for mobile */
+@media (hover: none) and (pointer: coarse) {
+  .container {
+    transition: transform 0.2s ease;
+  }
+  
+  .container:active {
+    transform: scale(0.98);
+  }
+}
+
+
