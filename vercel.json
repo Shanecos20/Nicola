@@ -1,7 +1,11 @@
 {
-  "framework": "vite",
-  "buildCommand": "npx vite build",
+  "buildCommand": "node node_modules/vite/bin/vite.js build || node build.js",
   "outputDirectory": "dist",
   "installCommand": "npm install",
-  "devCommand": "npm run dev"
+  "devCommand": "npm run dev",
+  "functions": {
+    "api/.*": {
+      "runtime": "nodejs18.x"
+    }
+  }
 }
