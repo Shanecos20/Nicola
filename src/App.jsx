@@ -14,32 +14,39 @@ function App() {
       <img src={rightSideImage} alt="Right decorative" />
     </div>
 
-    <div className="container">
-      <div className="watermark"></div>
-      
-      <div className="leaf-decoration">
-        <img src={branchImage} alt="Wedding Branch Decoration" />
+    <div className="main-content">
+      <div className="container">
+        <div className="watermark"></div>
+        
+        <div className="leaf-decoration">
+          <img src={branchImage} alt="Wedding Branch Decoration" />
+        </div>
+
+        <div className="save-the-date">
+          SAVE <span className="the">the</span><br />DATE
+        </div>
+
+        <div className="divider"></div>
+
+        <div className="wedding-of">FOR THE WEDDING OF</div>
+
+        <div className="names">Nicola & Connor</div>
+        
+        <div className="horizontal-line"></div>
+
+        <div className="divider"></div>
+
+        <div className="venue">
+          Shearwater Hotel & Spa, Ballinasloe, Co. Galway
+        </div>
+
+        <div className="date">24 . 10 . 26</div>
       </div>
 
-      <div className="save-the-date">
-        SAVE <span className="the">the</span><br />DATE
+      {/* Mobile-only engagement photo below the invitation */}
+      <div className="mobile-photos">
+        <img src={leftSideImage} alt="Engagement photo" />
       </div>
-
-      <div className="divider"></div>
-
-      <div className="wedding-of">FOR THE WEDDING OF</div>
-
-      <div className="names">Nicola & Connor</div>
-      
-      <div className="horizontal-line"></div>
-
-      <div className="divider"></div>
-
-      <div className="venue">
-        Shearwater Hotel & Spa, Ballinasloe, Co. Galway
-      </div>
-
-      <div className="date">24 . 10 . 26</div>
     </div>
     </>
   )

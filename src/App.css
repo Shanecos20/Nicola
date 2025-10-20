@@ -2,7 +2,7 @@
   max-width: 550px;
   width: 90%;
   min-height: 80vh;
-  max-height: 95vh;
+  max-height: none;
   background: rgba(217, 216, 216, 0.35);
   backdrop-filter: blur(40px);
   -webkit-backdrop-filter: blur(40px);
@@ -65,7 +65,7 @@
 .leaf-decoration {
   width: 320px;
   height: auto;
-  margin: -18.5vh auto 1vh;
+  margin: -12vh auto 1vh;
   opacity: 0.9;
   position: relative;
   z-index: 10;
@@ -86,7 +86,7 @@
   margin-bottom: 0.6vh;
   text-transform: uppercase;
   line-height: 0.90;
-  margin-top: -12.5vh;
+  margin-top: -6vh;
   position: relative;
   z-index: 20;
 }
@@ -157,7 +157,7 @@
   font-family: 'Raleway', sans-serif;
   font-size: clamp(1.8rem, 6vw, 2.4rem);
   color: #7a5f3d;
-  margin-top: 1.4vh;
+  margin-top: 2.5vh;
   letter-spacing: 0.15em;
   font-weight: 300;
 }
@@ -166,17 +166,32 @@
   display: none;
 }
 
+/* Main content wrapper */
+.main-content {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Hidden by default; enabled on mobile */
+.mobile-photos {
+  display: none;
+}
+
 /* Mobile Portrait (default mobile view) */
 @media (max-width: 768px) {
   body {
-    padding: 10px;
+    padding: 10px 10px 30px;
+    align-items: flex-start;
+    padding-top: 20px;
   }
   
   .container {
     width: 95%;
     max-width: 400px;
-    padding: 3rem 1.5rem 2rem;
-    min-height: 85vh;
+    padding: 2.5rem 1.25rem 1.75rem;
+    min-height: 75vh;
     border-radius: 50% 50% 20px 20px / 25% 25% 20px 20px;
   }
 
@@ -186,46 +201,65 @@
   
   .leaf-decoration {
     width: 200px;
-    margin: -10vh auto 2vh;
+    margin: -6vh auto 1.25vh;
   }
   
   .save-the-date {
-    margin-top: -5vh;
-    margin-bottom: 1.5rem;
-  }
-  
-  .divider {
-    height: 3vh;
-    margin: 1.5rem auto;
-  }
-  
-  .wedding-of {
+    margin-top: -2vh;
     margin-bottom: 1rem;
   }
   
+  .divider {
+    height: 2.5vh;
+    margin: 1rem auto;
+  }
+  
+  .wedding-of {
+    margin-bottom: 0.75rem;
+  }
+  
   .names {
-    margin-bottom: 1.5rem;
+    margin-bottom: 1rem;
   }
   
   .venue {
-    margin: 1.5rem auto;
-    padding: 0 1rem;
+    margin: 1rem auto;
+    padding: 0 0.75rem;
   }
   
   .date {
-    margin-top: 1.5rem;
+    margin-top: 1rem;
+  }
+
+  /* Mobile photo gallery below the card */
+  .mobile-photos {
+    display: block;
+    width: 100%;
+    text-align: center;
+    margin-top: 20px;
+    padding: 0 10px;
+  }
+
+  .mobile-photos img {
+    width: 70%;
+    max-width: 300px;
+    height: auto;
+    border-radius: 12px;
+    display: inline-block;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.25);
+    filter: grayscale(100%);
   }
 }
 
 /* Small Mobile */
 @media (max-width: 375px) {
   .container {
-    padding: 2.5rem 1rem 1.5rem;
+    padding: 2rem 0.9rem 1.25rem;
   }
   
   .leaf-decoration {
     width: 160px;
-    margin: -8vh auto 1.5vh;
+    margin: -4vh auto 1vh;
   }
   
   .save-the-date {
